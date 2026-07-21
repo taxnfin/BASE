@@ -1,0 +1,8 @@
+-- Ver migraciones 20260717163847 y 20260717164707 en Supabase:
+-- seed_default_categories(uid): siembra ~40 categorías propias (ingresos, COGS, SG&A,
+--   incluye ISR/IVA/IMSS) idempotente; se ejecuta también en el trigger de registro.
+-- seed_sat_categories(uid): siembra el catálogo SAT c_UsoCFDI (G01..CN01) para
+--   categorización automática por uso_cfdi.
+-- alter table categories add column color text; + colores default por grupo.
+-- (El SQL completo vive en supabase_migrations.schema_migrations, versiones
+--  20260717163847 y 20260717164707.)
